@@ -28,7 +28,7 @@ public class LexInput {
     }
 
     public Boolean getConfirmationStatus(){
-        if(!getIntent().containsKey("confirmationStatus")) return null;
+        if(!hasConfirmationStatus()) return null;
         else if(((String)getIntent().get("confirmationStatus")).equalsIgnoreCase("confirmed")) return true;
         return false;
     }
